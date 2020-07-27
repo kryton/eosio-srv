@@ -671,9 +671,9 @@ dependencies = [
 
 [[package]]
 name = "eosio-client-api"
-version = "0.2.0"
+version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c655d9653bc98dd0c297f157e1c3c206457e109129313b822867f20d00d75c2d"
+checksum = "cc14f54c8328b5a2872c187c04e71c6e90f2b030aacc827110ea2301ba572b8d"
 dependencies = [
  "base64 0.12.3",
  "base64-serde",
