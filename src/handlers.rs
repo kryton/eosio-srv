@@ -17,9 +17,10 @@ pub async fn index() -> impl Responder {
             + "<li><a href='/account/exoejrppvyew'>exoejrppvyew</a></li>"
             + "<li><a href='/account/wmftggomuzsi'>wmftggomuzsi</a></li>"
             + "</ul>"
-        +"<h2>Resource Market</h2><ul>"
+        +"<h2>Some System Tables/Resource Market</h2><ul>"
             +"<li><a href='/account/eosio/rows/eosio.reserv/userres'>eosio.reserv - userres</a></li>"
             +"<li><a href='/account/eosio/rows/eosio/rammarket'>eosio - ram market</a></li>"
+            +"<li><a href='/account/eosio/rows/0/rent.state'>eosio - rent state</a></li>"
         +"</ul>",
     )
 }
