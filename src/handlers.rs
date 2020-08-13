@@ -108,8 +108,13 @@ pub async fn table_detail(params: web::Path<(String, String)>) -> impl Responder
             {
                 Ok(gtbs) => {
                     let rows = gtbs.rows.iter().map(|row| {
+                        let sc = if row.scope == "" {
+                            "0"
+                        } else {
+                            &row.scope
+                        };
                         format!("<tr><td>{}</td><td><a href='/account/{}/rows/{}/{}'>{}</a></td><td>{}</td><td>{}</td><td>{}</td></tr>",
-                                row.scope, row.code, row.scope, row.table, row.table, row.payer, row.code, row.count)
+                                sc, row.code, sc, row.table, row.table, row.payer, row.code, row.count)
                     }).collect::<Vec<_>>();
                     HttpResponse::Ok().content_type("text/html").body(
                         "<a href='/'>Home</a><h1>Table Details</h1>".to_owned()
